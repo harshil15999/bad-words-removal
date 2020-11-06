@@ -78,13 +78,14 @@ python -m spacy download en
 
 
 ### NLP models used
-
-For maintaining meaningfulness in Questions, Questgen uses Three T5 models. One for Boolean Question generation, one for MCQs, FAQs, Paraphrasing and one for answer generation.
+a. Spacy Encore Sm\
+b. BERT
 
 ### Online Demo website
 
 
 ### License
+MIT
 
 
 ### Contribution guidelines
