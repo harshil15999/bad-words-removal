@@ -24,7 +24,7 @@ a. Cleaning the text by using text hero-Tokenization,Punctuation removal
 b. POS tagging 
 c. RULE based removal of bad words based on POS Tags
 
-### ** 2 ** Detection of toxicity [threat,insult,obscene,toxic,severe_toxic]
+###  2. Detection of toxicity [threat,insult,obscene,toxic,severe_toxic]
 a. Pre processing of text for BERT model[tokenization using BERT tokenizer]
 b. Adding layers on top of BERT
 c. Fine tuning on dataset
