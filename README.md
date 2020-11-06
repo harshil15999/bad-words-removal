@@ -1,21 +1,36 @@
-# <Library Name>  <br>
+# bad-words-removal<br>
 https://questgen.ai/  
 
 
-Questgen AI is an opensource NLP library focused on developing easy to use Question generation algorithms.<br>
-It is on a quest build the world's most advanced question generation AI leveraging on state-of-the-art transformer models like T5, BERT and OpenAI GPT-2 etc.
+## Aim
+
+This projec
 
 
 <img src= './quest.gif' >
 
-### Current Features :
-<pre>
-1. Multiple Choice Questions (MCQs)
-2. Boolean Questions (Yes/No)
-3. General FAQs
-4. Paraphrasing any Question  
-5. Question Answering.
-</pre>
+## Aim
+This project aims to provide an api for removing bad words and improve the overall experience of the online communications.
+
+
+## Current Features
+1. Detecting Bad words and substituting it with food names
+2. Detecting the toxicity of the comment/text
+
+## Pipeline Explanation
+### **1**. Detecting bad words and susbtituing food names
+
+a. Cleaning the text by using text hero-Tokenization,Punctuation removal
+b. POS tagging 
+c. RULE based removal of bad words based on POS Tags
+
+### ** 2 ** Detection of toxicity [threat,insult,obscene,toxic,severe_toxic]
+a. Pre processing of text for BERT model[tokenization using BERT tokenizer]
+b. Adding layers on top of BERT
+c. Fine tuning on dataset
+d. Validation 
+e. Predicting for single query    
+    
 
 ## Simple and Complete Google Colab Demo
 [![Open In Colab]()
@@ -25,17 +40,8 @@ It is on a quest build the world's most advanced question generation AI leveragi
 
 ### 1.1 Libraries
 ```
-pip install git+https://github.com/ramsrigouthamg/Questgen.ai
-pip install sense2vec==1.0.2
-pip install git+https://github.com/boudinfl/pke.git
-
 python -m nltk.downloader universal_tagset
 python -m spacy download en 
-```
-### 1.2 Download and extract zip of Sense2vec wordvectors that are used for generation of multiple choices.
-```
-wget https://github.com/explosion/sense2vec/releases/download/v1.0.0/s2v_reddit_2015_md.tar.gz
-tar -xvf  s2v_reddit_2015_md.tar.gz
 ```
 
 ## 2. Running the code
