@@ -9,18 +9,7 @@ Original file is located at
 
 # Installing the transformers library and additional libraries if looking process 
 
-!pip install -q transformers
 
-# Code for TPU packages install
-# !curl -q https://raw.githubusercontent.com/pytorch/xla/master/contrib/scripts/env-setup.py -o pytorch-xla-env-setup.py
-# !python pytorch-xla-env-setup.py --apt-packages libomp5 libopenblas-dev
-
-from google.colab import drive
-drive.mount('/content/drive')
-
-# Commented out IPython magic to ensure Python compatibility.
-# %cd drive/My\ Drive/data
-!ls
 
 # Importing stock ml libraries
 import numpy as np
@@ -31,10 +20,6 @@ import torch
 from torch.utils.data import Dataset, DataLoader, RandomSampler, SequentialSampler
 from transformers import BertTokenizer, BertModel, BertConfig
 
-# Preparing for TPU usage
-# import torch_xla
-# import torch_xla.core.xla_model as xm
-# device = xm.xla_device()
 
 # # Setting up the device for GPU usage
 
@@ -230,7 +215,7 @@ token_type_ids=token_type_ids.resize_((1,200))
 outputs = model(ids.to(device, dtype = torch.long),mask.to(device, dtype = torch.long),token_type_ids.to(device, dtype = torch.long))
 x=torch.sigmoid(outputs).cpu().detach().numpy().tolist()
 
-x
+
 
 x = np.array(x) >= 0.5
 
@@ -241,7 +226,7 @@ for i in range(len(x)):
     if(x[i]==True):
         print(l[i])
 
-x
+
 
 def query(model,text):
     from transformers import BertTokenizer

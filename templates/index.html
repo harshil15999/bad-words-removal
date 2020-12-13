@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>ToxiPred</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+
+    <!-- Banner -->
+    <section id="banner">
+        <h2><strong>Toxipred</strong></h2>
+        <p>THIS SITE WILL HELP YOU PREDICT THE
+             TOXIC LEVEL OF THE SENTENCE</p>
+    </section>
+
+    <section id="one" class="wrapper special">
+        <div class="inner">
+    </section>
+    <!-- Two -->
+    <section id="two" class="wrapper style2 special">
+        <div class="inner narrow">
+            <header>
+                <h2>CHECK THE LEVEL</h2>
+            </header>
+            <form class="grid-form" method="post" action="http://localhost:8080/" method="POST">
+                <div class="form-control ">
+                    <label for="comment">ENTER YOUR COMMENT HERE</label>
+                    <input name="comment" id="comment" type="text">
+                </div>
+
+                <div class="form-control">
+                    <label for="pred">PREDICTION</label>
+                    <textarea name="pred" id="pred" rows="4"> </textarea>
+                </div>
+
+                <div class="form-control">
+                    <label for="ver">CHANGED VERSION</label>
+                    <textarea name="pred" id="pred" rows="4"> {{ prediction_text }}</textarea>
+                </div>
+
+                <ul class="actions">
+                    <li><input value="predict the sentence" type="submit"></li>
+                </ul>
+            </form>
+
+
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
