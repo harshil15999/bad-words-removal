@@ -27,7 +27,7 @@ e. Predicting for single query
     
 
 ## Simple and Complete Google Colab Demo
-[![Open In Colab]()
+[![Open In Colab]
 
 
 ## 1. Installation
@@ -94,4 +94,4 @@ MIT
 
 
 
-[![Linkedin Link](linkedin.png)](#link to your linkedin)
+[![Linkedin Link](linkedin.png)]
